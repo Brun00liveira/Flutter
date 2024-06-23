@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:greengrocer/app_controller.dart';
 
 import 'package:greengrocer/home.dart';
+import 'package:greengrocer/login_page.dart';
 
 class AppWidgets extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class AppWidgets extends StatelessWidget {
                 brightness: AppController.instance.isDarkTheme
                     ? Brightness.dark
                     : Brightness.light),
-            home: HomePage(),
+            home: LoginPage(),
           );
         });
   }

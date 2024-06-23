@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/app_controller.dart';
 import 'package:greengrocer/switch.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,9 +22,7 @@ class HomePageState extends State<HomePage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: ListView(
           children: [
             Text(
               'Contador: $counter',
