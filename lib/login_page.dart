@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greengrocer/home.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -49,7 +50,8 @@ class LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     if (email == "brunobromo321@gmail.com" &&
                         password == "123") {
-                      print('correto');
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => HomePage()));
                     } else {
                       print('incorreto');
                     }
