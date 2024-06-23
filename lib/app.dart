@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:greengrocer/app_controller.dart';
-
-import 'package:greengrocer/home.dart';
 import 'package:greengrocer/login_page.dart';
 
 class AppWidgets extends StatelessWidget {
+  const AppWidgets({super.key});
+
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
@@ -16,7 +16,7 @@ class AppWidgets extends StatelessWidget {
                 brightness: AppController.instance.isDarkTheme
                     ? Brightness.dark
                     : Brightness.light),
-            home: LoginPage(),
+            home: const LoginPage(),
           );
         });
   }

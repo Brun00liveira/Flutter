@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:greengrocer/switch.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<HomePage> createState() {
     return HomePageState();
@@ -15,20 +17,20 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
-        actions: [CustomSwitch()],
+        title: const Text('Home Page'),
+        actions: const [CustomSwitch()],
         backgroundColor: Colors.blue, // Defina a cor desejada aqui
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: ListView(
           children: [
             Text(
               'Contador: $counter',
-              style: TextStyle(fontSize: 30),
+              style: const TextStyle(fontSize: 30),
             ),
-            CustomSwitch(),
+            const CustomSwitch(),
             Container(
               height: 50,
             ),
@@ -57,13 +59,13 @@ class HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
         backgroundColor: Colors.blue,
         onPressed: () {
           setState(() {
             counter = counter + 3;
           });
         },
+        child: const Icon(Icons.add),
       ),
     );
   }
