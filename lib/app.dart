@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greengrocer/app_controller.dart';
+import 'package:greengrocer/home.dart';
 import 'package:greengrocer/login_page.dart';
 
 class AppWidgets extends StatelessWidget {
@@ -16,7 +17,11 @@ class AppWidgets extends StatelessWidget {
                 brightness: AppController.instance.isDarkTheme
                     ? Brightness.dark
                     : Brightness.light),
-            home: const LoginPage(),
+            initialRoute: '/',
+            routes: {
+              '/': (context) => LoginPage(),
+              '/home': (context) => HomePage()
+            },
           );
         });
   }

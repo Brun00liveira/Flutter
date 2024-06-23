@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/home.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -26,6 +25,14 @@ class LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(
+                  width: 100,
+                  height: 100,
+                  child: Image.asset('images/logo.png'),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 TextField(
                   onChanged: (text) {
                     email = text;
@@ -50,8 +57,7 @@ class LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     if (email == "brunobromo321@gmail.com" &&
                         password == "123") {
-                      Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.of(context).pushReplacementNamed('/home');
                     } else {
                       print('incorreto');
                     }

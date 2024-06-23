@@ -63,6 +63,7 @@ class HomePageState extends State<HomePage> {
         onPressed: () {
           setState(() {
             counter = counter + 3;
+            print(counter);
           });
         },
         child: const Icon(Icons.add),
